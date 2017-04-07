@@ -1,5 +1,6 @@
-.\objects\process.o: ..\lab3\ece3140_lab3\process.c
-.\objects\process.o: ..\lab3\ece3140_lab3\3140_concur.h
+.\objects\process.o: process.c
+.\objects\process.o: shared_structs.h
+.\objects\process.o: 3140_concur.h
 .\objects\process.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\process.o: C:\Keil_v5\ARM\PACK\Keil\Kinetis_SDK_DFP\2.2.0\platform\devices\fsl_device_registers.h
 .\objects\process.o: C:\Keil_v5\ARM\PACK\Keil\Kinetis_SDK_DFP\2.2.0\platform\devices\MK64F12/include/MK64F12.h

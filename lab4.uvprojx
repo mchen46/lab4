@@ -400,11 +400,6 @@
               <FilePath>.\cond.h</FilePath>
             </File>
             <File>
-              <FileName>lab4_t0.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\lab4_t0.c</FilePath>
-            </File>
-            <File>
               <FileName>lock.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\lock.h</FilePath>
@@ -425,14 +420,19 @@
               <FilePath>.\utils.h</FilePath>
             </File>
             <File>
-              <FileName>process.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\lab3\ece3140_lab3\process.c</FilePath>
-            </File>
-            <File>
               <FileName>lock.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\lock.c</FilePath>
+            </File>
+            <File>
+              <FileName>lab4_t0.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lab4_t0.c</FilePath>
+            </File>
+            <File>
+              <FileName>process_soln.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\process_soln.c</FilePath>
             </File>
           </Files>
         </Group>

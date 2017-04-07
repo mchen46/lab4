@@ -15,14 +15,15 @@ typedef struct process_state {
  * This defines the lock structure
  */
 typedef struct lock_state {
-	
+	process_t *process;
+	int locked;
 } lock_t;
 
 /**
  * This defines the conditional variable structure
  */
-typedef struct cond_var {
+/* typedef struct cond_var {
 
-} cond_t;
+} cond_t; */
 
 #endif

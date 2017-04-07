@@ -22,7 +22,7 @@ Dialog DLL:      TCM.DLL V1.21.0.0
  
 <h2>Project:</h2>
 C:\Users\meghan\Desktop\3140\lab4\lab4.uvprojx
-Project File Date:  04/06/2017
+Project File Date:  04/07/2017
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
@@ -31,16 +31,18 @@ assembling 3140.s...
 3140.s(102): warning: A1581W: Added 2 bytes of padding at address 0x72
 compiling 3140_concur.c...
 compiling utils.c...
-compiling process.c...
 compiling lock.c...
+compiling process.c...
+compiling lab4_t0.c...
+lab4_t0.c(43): warning:  #111-D: statement is unreachable
+        return 0;       
+lab4_t0.c: 1 warning, 0 errors
 compiling startup.c...
 assembling startup_MK64F12.s...
 compiling system_MK64F12.c...
 linking...
-.\Objects\lab4.axf: Error: L6218E: Undefined symbol main (referred from entry9a.o).
-Not enough information to list image symbols.
-Finished: 1 information, 0 warning and 1 error messages.
-".\Objects\lab4.axf" - 1 Error(s), 1 Warning(s).
+Program Size: Code=1464 RO-data=1056 RW-data=32 ZI-data=2048  
+".\Objects\lab4.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -72,8 +74,7 @@ Package Vendor: Keil
       Source file:   platform\devices\startup.c
       Source file:   platform\devices\MK64F12\startup\system_MK64F12.c
       Include file:  platform\devices\MK64F12\startup\system_MK64F12.h
-Target not created.
-Build Time Elapsed:  00:01:31
+Build Time Elapsed:  00:01:28
 </pre>
 </body>
 </html>
