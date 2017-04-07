@@ -2,13 +2,37 @@
 #include "3140_concur.h"
 #include <fsl_device_registers.h>
 
-
 /* the currently running process. current_process must be NULL if no process is running,
     otherwise it must point to the process_t of the currently running process
 */
 process_t * current_process = NULL; 
 process_t * process_queue = NULL;
 process_t * process_tail = NULL;
+
+process_t * blocked_queue = NULL;
+process_t * blocked_tail = NULL;
+
+static void push_tail_block(process_t *proc) {
+	if (!blocked_queue) {
+		blocked_queue = proc;
+	}
+	if (blocked_tail) {
+		blocked_tail->next_block = proc;
+	}
+	blocked_tail = proc;
+	proc->next_block = NULL;
+}
+
+static process_t * pop_blocked_process() {
+	if (!blocked_queue) return NULL;
+	process_t *proc = blocked_queue;
+	blocked_queue = proc->next_block;
+	if (blocked_tail == proc) {
+		blocked_tail = NULL;
+	}
+	proc->next_block = NULL;
+	return proc;
+}
 
 static process_t * pop_front_process() {
 	if (!process_queue) return NULL;
@@ -37,15 +61,28 @@ static void process_free(process_t *proc) {
 	free(proc);
 }
 
+void move_to_ready(void) {
+	process_t *tmp = pop_blocked_process();
+	tmp->waiting = 0;
+	push_tail_process(tmp);
+}
+
 /* Called by the runtime system to select another process.
    "cursp" = the stack pointer for the currently running process
 */
 unsigned int * process_select (unsigned int * cursp) {
 	if (cursp) {
-		// Suspending a process which has not yet finished, save state and make it the tail
-		current_process->sp = cursp;
-		push_tail_process(current_process);
-	} else {
+		if (current_process->waiting) {
+			current_process->sp = cursp;
+			push_tail_block(current_process);
+		}
+		else {
+			// Suspending a process which has not yet finished, save state and make it the tail
+			current_process->sp = cursp;
+			push_tail_process(current_process);
+		}
+	} 
+	else {
 		// Check if a process was running, free its resources if one just finished
 		if (current_process) {
 			process_free(current_process);
