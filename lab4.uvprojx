@@ -425,14 +425,14 @@
               <FilePath>.\lock.c</FilePath>
             </File>
             <File>
-              <FileName>lab4_t0.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\lab4_t0.c</FilePath>
-            </File>
-            <File>
               <FileName>process_soln.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\process_soln.c</FilePath>
+            </File>
+            <File>
+              <FileName>lab4_t1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lab4_t1.c</FilePath>
             </File>
           </Files>
         </Group>

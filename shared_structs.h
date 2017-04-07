@@ -8,6 +8,8 @@
  */
 typedef struct process_state {
 	unsigned int *sp;
+	unsigned int *orig_sp;
+	int n;
 	struct process_state *next;
 } process_t;
 

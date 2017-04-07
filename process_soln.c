@@ -1,13 +1,7 @@
+#include "shared_structs.h"
 #include "3140_concur.h"
 #include <fsl_device_registers.h>
 
-// The process_t structure definition
-struct process_state {
-	unsigned int *sp;
-	unsigned int *orig_sp;
-	int n;
-	struct process_state *next;
-};
 
 /* the currently running process. current_process must be NULL if no process is running,
     otherwise it must point to the process_t of the currently running process
