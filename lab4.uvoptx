@@ -327,8 +327,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\lab4_t1.c</PathWithFileName>
-      <FilenameWithoutPath>lab4_t1.c</FilenameWithoutPath>
+      <PathWithFileName>.\lab4_t0.c</PathWithFileName>
+      <FilenameWithoutPath>lab4_t0.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

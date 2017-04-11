@@ -11,29 +11,27 @@ process_t * current_process = NULL;
 process_t * process_queue = NULL;
 process_t * process_tail = NULL;
 
-process_t * blocked_queue = NULL;
-process_t * blocked_tail = NULL;
-
-static void push_tail_block(process_t *proc) {
-	if (!blocked_queue) {
-		blocked_queue = proc;
-		current_process->next_block = proc;
+static void push_tail_blocked(process_t *proc) {
+	if (!proc->lock->blocked_queue) {
+		proc->lock->blocked_queue = proc;
 	}
-	if (blocked_tail) {
-		blocked_tail->next_block = proc;
+	if (proc->lock->blocked_tail) {
+		proc->lock->blocked_tail->next_block = proc;
 	}
-	blocked_tail = proc;
+	proc->lock->blocked_tail = proc;
 	proc->next_block = NULL;
 }
 
-static process_t * pop_blocked_process() {
-	if (!blocked_queue) return NULL;
-	process_t *proc = blocked_queue;
-	blocked_queue = proc->next_block;
-	if (blocked_tail == proc) {
-		blocked_tail = NULL;
+static process_t * pop_front_blocked(lock_t *l) {
+	if (!l->blocked_queue) return NULL;
+	process_t *proc = l->blocked_queue;
+	l->blocked_queue = proc->next_block;
+	if (l->blocked_tail == proc) {
+		l->blocked_tail = NULL;
 	}
 	proc->next_block = NULL;
+	proc->lock = NULL;
+	proc->waiting = 0;
 	return proc;
 }
 
@@ -72,15 +70,7 @@ unsigned int * process_select (unsigned int * cursp) {
 	if (cursp) {
 		if (current_process->waiting) {
 			current_process->sp = cursp;
-			push_tail_block(current_process);
-			current_process = pop_front_process();
-		}
-		else if (blocked_queue) {
-			current_process->sp = cursp;
-			push_tail_process(current_process);
-			process_t *tmp = pop_blocked_process();
-			tmp->waiting = 0;
-			push_tail_process(tmp);
+			push_tail_blocked(current_process);
 		}
 		else {
 			// Suspending a process which has not yet finished, save state and make it the tail
@@ -111,7 +101,7 @@ unsigned int * process_select (unsigned int * cursp) {
 void process_start (void) {
 	SIM->SCGC6 |= SIM_SCGC6_PIT_MASK;
 	PIT->MCR = 0;
-	PIT->CHANNEL[0].LDVAL = DEFAULT_SYSTEM_CLOCK * 10;
+	PIT->CHANNEL[0].LDVAL = DEFAULT_SYSTEM_CLOCK / 10;
 	NVIC_EnableIRQ(PIT0_IRQn);
 	// Don't enable the timer yet. The scheduler will do so itself
 	
