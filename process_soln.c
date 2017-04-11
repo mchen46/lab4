@@ -61,11 +61,6 @@ static void process_free(process_t *proc) {
 	free(proc);
 }
 
-void move_to_ready(void) {
-	process_t *tmp = pop_blocked_process();
-	tmp->waiting = 0;
-	push_tail_process(tmp);
-}
 
 /* Called by the runtime system to select another process.
    "cursp" = the stack pointer for the currently running process
@@ -75,11 +70,16 @@ unsigned int * process_select (unsigned int * cursp) {
 		if (current_process->waiting) {
 			current_process->sp = cursp;
 			push_tail_block(current_process);
+			current_process = pop_front_process();
+		}
+		else if (blocked_queue) {
+			current_process = pop_blocked_process();
 		}
 		else {
 			// Suspending a process which has not yet finished, save state and make it the tail
 			current_process->sp = cursp;
 			push_tail_process(current_process);
+			current_process = pop_front_process();
 		}
 	} 
 	else {
@@ -90,7 +90,7 @@ unsigned int * process_select (unsigned int * cursp) {
 	}
 	
 	// Select the new current process from the front of the queue
-	current_process = pop_front_process();
+	
 	
 	if (current_process) {
 		// Launch the process which was just popped off the queue

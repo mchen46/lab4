@@ -20,14 +20,18 @@ void l_init(lock_t* l) {
  * @param l pointer to lock to be grabbed
  */
 void l_lock(lock_t* l) {
+	PIT->CHANNEL[0].TCTRL = 0x1;
 	if (l->locked) {
 		current_process->waiting = 1;
+		current_process->lock = l;
 		process_blocked();
 	}
 	else {
 		current_process->waiting = 0;
+		current_process->lock = l;
 		l->locked = 1;
 	}
+	PIT->CHANNEL[0].TCTRL = 0x3;
 }
 
 /**
@@ -37,10 +41,10 @@ void l_lock(lock_t* l) {
  * @param l pointer to lock to be unlocked
  */
 void l_unlock(lock_t* l) {
+	PIT->CHANNEL[0].TCTRL = 0x1;
 	if (!current_process->next_block) {
 		l->locked = 0;
 	}
-	else {
-		move_to_ready();
-	}
+	current_process->lock = NULL;
+	PIT->CHANNEL[0].TCTRL = 0x3;
 }
