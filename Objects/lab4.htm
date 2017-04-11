@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\lab4.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\lab4.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Fri Apr 07 11:09:18 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Mon Apr 10 23:38:21 2017
 <BR><P>
 <H3>Maximum Stack Usage =         76 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -14,7 +14,7 @@ Functions with no stack information
 </H3><UL>
  <LI><a href="#[10]">SVC_Handler</a>
  <LI><a href="#[6]">process_terminated</a>
- <LI><a href="#[85]">process_begin</a>
+ <LI><a href="#[83]">process_begin</a>
  <LI><a href="#[71]">process_blocked</a>
  <LI><a href="#[9]">PIT0_IRQHandler</a>
  <LI><a href="#[7]">SVC0_begin</a>
@@ -152,7 +152,7 @@ Global Symbols
 <P><STRONG><a name="[3]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk64f12.o(.text)
 </UL>
-<P><STRONG><a name="[87]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry4.o(.ARM.Collect$$$$00000003))
+<P><STRONG><a name="[86]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry4.o(.ARM.Collect$$$$00000003))
 
 <P><STRONG><a name="[6a]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -162,15 +162,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[88]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[87]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[89]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[88]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[8a]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[89]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[8b]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[8a]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[8c]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[8b]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[a]"></a>Reset_Handler</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, startup_mk64f12.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk64f12.o(RESET)
@@ -499,10 +499,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[8d]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[8c]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[7c]"></a>LEDBlue_Toggle</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, utils.o(i.LEDBlue_Toggle))
-<BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;p1
+<P><STRONG><a name="[78]"></a>LEDBlue_Toggle</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, utils.o(i.LEDBlue_Toggle))
+<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;p1
 </UL>
 
 <P><STRONG><a name="[6d]"></a>LEDGreen_On</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, utils.o(i.LEDGreen_On))
@@ -514,50 +514,50 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[86]"></a>LEDRed_Toggle</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, utils.o(i.LEDRed_Toggle))
+<P><STRONG><a name="[85]"></a>LEDRed_Toggle</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, utils.o(i.LEDRed_Toggle))
 <BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writer
 </UL>
 
-<P><STRONG><a name="[74]"></a>LED_Initialize</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, utils.o(i.LED_Initialize))
+<P><STRONG><a name="[72]"></a>LED_Initialize</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, utils.o(i.LED_Initialize))
 <BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[1]"></a>SystemInit</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, system_mk64f12.o(i.SystemInit))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk64f12.o(.text)
 </UL>
-<P><STRONG><a name="[81]"></a>free</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, malloc2.o(i.__free$2region))
+<P><STRONG><a name="[7e]"></a>free</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, malloc2.o(i.__free$2region))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = free
 </UL>
-<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_free
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_stack_free
+<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_free
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_stack_free
 </UL>
 
-<P><STRONG><a name="[7e]"></a>malloc</STRONG> (Thumb, 92 bytes, Stack size 20 bytes, malloc2.o(i.__malloc$2region))
+<P><STRONG><a name="[7a]"></a>malloc</STRONG> (Thumb, 92 bytes, Stack size 20 bytes, malloc2.o(i.__malloc$2region))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = malloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_create
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_stack_init
+<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_create
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_stack_init
 </UL>
 
-<P><STRONG><a name="[8e]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[8d]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[8f]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[8e]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[90]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[8f]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[7b]"></a>delay</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, utils.o(i.delay))
+<P><STRONG><a name="[77]"></a>delay</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, utils.o(i.delay))
 <BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writer
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;p1
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;p1
 </UL>
 
 <P><STRONG><a name="[2]"></a>init_data_bss</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, startup.o(i.init_data_bss))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk64f12.o(.text)
 </UL>
-<P><STRONG><a name="[75]"></a>l_init</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lock.o(i.l_init))
+<P><STRONG><a name="[73]"></a>l_init</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lock.o(i.l_init))
 <BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[70]"></a>l_lock</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, lock.o(i.l_lock))
+<P><STRONG><a name="[70]"></a>l_lock</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, lock.o(i.l_lock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = l_lock
 </UL>
@@ -567,12 +567,8 @@ Global Symbols
 <LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reader
 </UL>
 
-<P><STRONG><a name="[72]"></a>l_unlock</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, lock.o(i.l_unlock))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = l_unlock &rArr; move_to_ready
-</UL>
-<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_to_ready
-</UL>
-<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writer
+<P><STRONG><a name="[84]"></a>l_unlock</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, lock.o(i.l_unlock))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writer
 <LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reader
 </UL>
 
@@ -580,98 +576,90 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 76 + Unknown Stack Size
 <LI>Call Chain = main &rArr; process_create &rArr; process_stack_init &rArr; malloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_start
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_create
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l_init
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Initialize
+<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_start
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_create
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l_init
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Initialize
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDGreen_On
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[73]"></a>move_to_ready</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, process_soln.o(i.move_to_ready))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = move_to_ready
-</UL>
-<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;push_tail_process
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pop_blocked_process
-</UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l_unlock
-</UL>
-
-<P><STRONG><a name="[7a]"></a>p1</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, lab4_t1.o(i.p1))
+<P><STRONG><a name="[76]"></a>p1</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, lab4_t1.o(i.p1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = p1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDBlue_Toggle
+<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDBlue_Toggle
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reader
 </UL>
 
-<P><STRONG><a name="[76]"></a>process_create</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, process_soln.o(i.process_create))
+<P><STRONG><a name="[74]"></a>process_create</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, process_soln.o(i.process_create))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = process_create &rArr; process_stack_init &rArr; malloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;push_tail_process
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_stack_init
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_stack_free
+<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;push_tail_process
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_stack_init
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_stack_free
 </UL>
 <BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[82]"></a>process_select</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, process_soln.o(i.process_select))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = process_select &rArr; process_free &rArr; process_stack_free &rArr; free
+<P><STRONG><a name="[7f]"></a>process_select</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, process_soln.o(i.process_select))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = process_select &rArr; process_free &rArr; process_stack_free &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;push_tail_process
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;push_tail_block
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_free
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pop_front_process
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;push_tail_process
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;push_tail_block
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_free
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pop_front_process
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pop_blocked_process
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[7f]"></a>process_stack_free</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, 3140_concur.o(i.process_stack_free))
+<P><STRONG><a name="[7b]"></a>process_stack_free</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, 3140_concur.o(i.process_stack_free))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = process_stack_free &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
+<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 </UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_create
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_free
+<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_create
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_free
 </UL>
 
-<P><STRONG><a name="[7d]"></a>process_stack_init</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, 3140_concur.o(i.process_stack_init))
+<P><STRONG><a name="[79]"></a>process_stack_init</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, 3140_concur.o(i.process_stack_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = process_stack_init &rArr; malloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_create
+<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_create
 </UL>
 
-<P><STRONG><a name="[77]"></a>process_start</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, process_soln.o(i.process_start))
+<P><STRONG><a name="[75]"></a>process_start</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, process_soln.o(i.process_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = process_start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_begin
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_begin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[5]"></a>reader</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, lab4_t1.o(i.reader))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
-<LI>Call Chain = reader &rArr; l_unlock &rArr; move_to_ready
+<BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
+<LI>Call Chain = reader &rArr; p1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;p1
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l_unlock
+<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;p1
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l_unlock
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l_lock
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lab4_t1.o(i.main)
 </UL>
 <P><STRONG><a name="[4]"></a>writer</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, lab4_t1.o(i.writer))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
-<LI>Call Chain = writer &rArr; l_unlock &rArr; move_to_ready
+<BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
+<LI>Call Chain = writer &rArr; l_lock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l_unlock
+<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l_unlock
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l_lock
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDRed_Toggle
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDRed_Toggle
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lab4_t1.o(i.main)
 </UL>
@@ -681,8 +669,8 @@ Global Symbols
 <P><STRONG><a name="[6]"></a>process_terminated</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, 3140.o(myProg))
 <BR>[Address Reference Count : 1]<UL><LI> 3140_concur.o(i.process_stack_init)
 </UL>
-<P><STRONG><a name="[85]"></a>process_begin</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, 3140.o(myProg))
-<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_start
+<P><STRONG><a name="[83]"></a>process_begin</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, 3140.o(myProg))
+<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_start
 </UL>
 
 <P><STRONG><a name="[71]"></a>process_blocked</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, 3140.o(myProg))
@@ -690,10 +678,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[9]"></a>PIT0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, 3140.o(myProg))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
 <LI>Call Chain = PIT0_IRQHandler &rArr; process_select &rArr; process_free &rArr; process_stack_free &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_select
+<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_select
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> 3140.o(myProg)
 <LI> startup_mk64f12.o(RESET)
@@ -715,31 +703,30 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDGreen_On
 </UL>
 
-<P><STRONG><a name="[78]"></a>pop_blocked_process</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, process_soln.o(i.pop_blocked_process))
-<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_to_ready
+<P><STRONG><a name="[82]"></a>pop_blocked_process</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, process_soln.o(i.pop_blocked_process))
+<BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_select
 </UL>
 
-<P><STRONG><a name="[84]"></a>pop_front_process</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, process_soln.o(i.pop_front_process))
-<BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_select
+<P><STRONG><a name="[81]"></a>pop_front_process</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, process_soln.o(i.pop_front_process))
+<BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_select
 </UL>
 
-<P><STRONG><a name="[80]"></a>process_free</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, process_soln.o(i.process_free))
+<P><STRONG><a name="[7d]"></a>process_free</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, process_soln.o(i.process_free))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = process_free &rArr; process_stack_free &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_stack_free
+<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_stack_free
 </UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_select
-</UL>
-
-<P><STRONG><a name="[83]"></a>push_tail_block</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, process_soln.o(i.push_tail_block))
-<BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_select
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_select
 </UL>
 
-<P><STRONG><a name="[79]"></a>push_tail_process</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, process_soln.o(i.push_tail_process))
-<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_create
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_to_ready
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_select
+<P><STRONG><a name="[80]"></a>push_tail_block</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, process_soln.o(i.push_tail_block))
+<BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_select
+</UL>
+
+<P><STRONG><a name="[7c]"></a>push_tail_process</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, process_soln.o(i.push_tail_process))
+<BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_create
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_select
 </UL>
 <P>
 <H3>

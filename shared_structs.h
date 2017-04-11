@@ -7,12 +7,13 @@
  */
 typedef struct lock_state {
 	int locked;
+	process_t *process;
 } lock_t;
 
 /**
  * This structure holds the process structure information
  */
-typedef struct process_state {
+struct process_state {
 	unsigned int *sp;
 	unsigned int *orig_sp;
 	int waiting;
@@ -20,7 +21,7 @@ typedef struct process_state {
 	int n;
 	struct process_state *next;
 	struct process_state *next_block;
-} process_t;
+};
 
 /**
  * This defines the conditional variable structure

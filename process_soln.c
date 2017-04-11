@@ -1,10 +1,12 @@
-#include "shared_structs.h"
 #include "3140_concur.h"
 #include <fsl_device_registers.h>
+#include "shared_structs.h"
 
 /* the currently running process. current_process must be NULL if no process is running,
     otherwise it must point to the process_t of the currently running process
 */
+typedef struct process_state process_t;
+
 process_t * current_process = NULL; 
 process_t * process_queue = NULL;
 process_t * process_tail = NULL;
@@ -15,6 +17,7 @@ process_t * blocked_tail = NULL;
 static void push_tail_block(process_t *proc) {
 	if (!blocked_queue) {
 		blocked_queue = proc;
+		current_process->next_block = proc;
 	}
 	if (blocked_tail) {
 		blocked_tail->next_block = proc;
@@ -73,13 +76,16 @@ unsigned int * process_select (unsigned int * cursp) {
 			current_process = pop_front_process();
 		}
 		else if (blocked_queue) {
-			current_process = pop_blocked_process();
+			current_process->sp = cursp;
+			push_tail_process(current_process);
+			process_t *tmp = pop_blocked_process();
+			tmp->waiting = 0;
+			push_tail_process(tmp);
 		}
 		else {
 			// Suspending a process which has not yet finished, save state and make it the tail
 			current_process->sp = cursp;
 			push_tail_process(current_process);
-			current_process = pop_front_process();
 		}
 	} 
 	else {
@@ -90,7 +96,7 @@ unsigned int * process_select (unsigned int * cursp) {
 	}
 	
 	// Select the new current process from the front of the queue
-	
+	current_process = pop_front_process();
 	
 	if (current_process) {
 		// Launch the process which was just popped off the queue

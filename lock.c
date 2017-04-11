@@ -11,6 +11,7 @@
  * @param l pointer to lock to be initialised
  */
 void l_init(lock_t* l) {
+	l->process = NULL;
 	l->locked = 0;
 }
 
@@ -29,6 +30,7 @@ void l_lock(lock_t* l) {
 	else {
 		current_process->waiting = 0;
 		current_process->lock = l;
+		l->process = current_process;
 		l->locked = 1;
 	}
 	PIT->CHANNEL[0].TCTRL = 0x3;
@@ -46,5 +48,6 @@ void l_unlock(lock_t* l) {
 		l->locked = 0;
 	}
 	current_process->lock = NULL;
+	l->process = current_process->next_block;
 	PIT->CHANNEL[0].TCTRL = 0x3;
 }
